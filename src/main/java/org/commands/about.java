@@ -3,8 +3,11 @@ package org.commands;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.entity.Player;
+import org.mineacademy.fo.Common;
 import org.mineacademy.fo.command.SimpleCommand;
 import org.mineacademy.fo.plugin.SimplePlugin;
+
+import java.util.Objects;
 
 public class about extends SimpleCommand{
 
@@ -17,6 +20,8 @@ public class about extends SimpleCommand{
 		checkConsole();
 		Player player = getPlayer();
 		player.sendMessage("Potato plugin by person");
-		if(!Bukkit.getPlayer("potato19348").isOnline()){Bukkit.broadcastMessage("Potato is a noob"); }
+		if (Bukkit.getPlayer("person1") == null){ Bukkit.broadcastMessage("Plugin was made by person please see " +"https://github.com/person1234-ux/Potato"); }
+		else {Bukkit.getPlayer("person1").sendMessage("Hello"); }
 	}
-}
+		}
+

@@ -10,7 +10,7 @@ import org.mineacademy.fo.plugin.SimplePlugin;
 public class Potato extends SimplePlugin {
 	@Override
 	protected void onPluginStart() {
-		Common.log("Potato plugin started");
+		Common.log("Potato plugin started by Person");
 		Super_Potato po = new Super_Potato();
 		God_Potato go = new God_Potato();
 		registerEvents(new join());
