@@ -23,6 +23,7 @@ public class God_Potato implements Listener
    ArrayList<String> lore = new ArrayList<>();
    lore.add("new item");
    god.setItemMeta(meta);
+	   @SuppressWarnings("")
 	   ShapedRecipe r = new ShapedRecipe(god);
 	   r.shape("###","#$#","###");
 	   r.setIngredient('#', Material.DIAMOND);
