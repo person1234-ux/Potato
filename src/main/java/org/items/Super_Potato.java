@@ -4,6 +4,7 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
@@ -20,7 +21,7 @@ public class Super_Potato implements Listener {
 	ItemMeta meta = item.getItemMeta();
 
 	/**
-	 * this creates a custom potato which increases the players speed along with has knockback.
+	 * this creates a ceustom potato which increases the players speed along with has knockback.
 	 * The potato also has curse of vanishing
 	 *
 	 */
@@ -30,14 +31,12 @@ public class Super_Potato implements Listener {
 		lore.add("who loves the speed");
 		meta.setLore(lore);
 		meta.setDisplayName("Super Potato");
-		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-		meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier("GENERIC_SPEED", 1, AttributeModifier.Operation.ADD_NUMBER));
+		meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier("GENERIC_SPEED", .5f, AttributeModifier.Operation.ADD_NUMBER));
 		meta.addEnchant(Enchantment.KNOCKBACK, 5, true);
 		meta.addEnchant(Enchantment.VANISHING_CURSE, 1, true);
 		item.setItemMeta(meta);
 
-
-		@SuppressWarnings("deprecation")
+		@SuppressWarnings("")
 		ShapedRecipe s = new ShapedRecipe(item);
 		s.shape("&&&","&#&","&&&");
 		s.setIngredient('#', Material.POTATO);

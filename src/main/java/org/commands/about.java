@@ -27,6 +27,7 @@ public class about extends SimpleCommand {
 			}
 		} else {
 			System.out.println("Potato plugin");
+			System.out.println("Plugin was made by person please see" + " https://github.com/person1234-ux/Potato");
 		}
 	}
 }
