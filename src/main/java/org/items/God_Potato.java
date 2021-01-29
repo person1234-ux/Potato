@@ -39,7 +39,7 @@ public class God_Potato implements Listener {
 	   @SuppressWarnings("")
 	   ShapedRecipe r = new ShapedRecipe(god);
 	   r.shape("###","#$#","###");
-	   r.setIngredient('#', Material.DIAMOND_BLOCK);
+	   r.setIngredient('#', Material.NETHERITE_BLOCK);
 	   r.setIngredient('$', Material.POTATO);
 
 	   Bukkit.addRecipe(r);

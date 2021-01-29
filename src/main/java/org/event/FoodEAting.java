@@ -42,10 +42,11 @@ public class FoodEAting implements Listener {
 		final ItemStack item = event.getItem();
 		Player player = event.getPlayer();
 		if (item.getItemMeta().getLocalizedName().equals("GOD_POTATO")){
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 24000, 3));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION , 24000, 1));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 24000, 5));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 24000,3));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 12000, 3));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION , 12000, 1));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 12000, 5));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 12000,3));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 12000,3));
 
 
 		}
