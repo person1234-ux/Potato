@@ -11,6 +11,7 @@ public class join implements Listener {
 	@EventHandler
 	public void potatojoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
+		event.setJoinMessage("");
 		Common.tell(player, "Welcome to the server!");
 	}
 }

@@ -6,18 +6,14 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerItemConsumeEvent;
-import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
 import org.main.Potato;
 
 import java.util.ArrayList;
 
 public class Super_Potato implements Listener {
-
 
 	private ItemStack item = new ItemStack(Material.POTATO);
 	private ItemMeta meta = item.getItemMeta();

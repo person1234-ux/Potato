@@ -3,7 +3,6 @@
  */
 
 package org.items;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
