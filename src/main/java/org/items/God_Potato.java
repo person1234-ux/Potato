@@ -18,7 +18,6 @@ public class God_Potato implements Listener {
 	private ItemStack god = new ItemStack(Material.POTATO);
    private ItemMeta meta = god.getItemMeta();
 private NamespacedKey godkey = new NamespacedKey(Potato.getInstance(),"god_key");
-//
 
 
 
@@ -40,7 +39,6 @@ private NamespacedKey godkey = new NamespacedKey(Potato.getInstance(),"god_key")
 	   r.shape("###","#$#","###");
 	   r.setIngredient('#', Material.NETHERITE_BLOCK);
 	   r.setIngredient('$', Material.POTATO);
-
 	   Bukkit.addRecipe(r);
 
 

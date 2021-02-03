@@ -1,6 +1,5 @@
 package org.event;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,5 +12,6 @@ public class join implements Listener {
 		Player player = event.getPlayer();
 		event.setJoinMessage("");
 		Common.tell(player, "Welcome to the server!");
+
 	}
 }

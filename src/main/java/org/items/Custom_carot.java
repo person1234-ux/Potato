@@ -21,6 +21,10 @@ public class Custom_carot implements Listener {
 	private ItemStack customcarto = new ItemStack(Material.GOLDEN_CARROT);
 	private ItemMeta metas = customcarto.getItemMeta();
 	private NamespacedKey carotkey = new NamespacedKey(Potato.getInstance(), "Carott_Key");
+
+	/**
+	 * adds a custom carrot 
+	 */
 	public void customcarot(){
 		ArrayList<String> lores = new ArrayList<>();
 		lores.add("Everyone favorite carrot");
