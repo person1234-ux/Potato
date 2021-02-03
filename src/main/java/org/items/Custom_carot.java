@@ -6,6 +6,7 @@ package org.items;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.event.Listener;
@@ -13,12 +14,14 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.main.Potato;
 
 import java.util.ArrayList;
 
 public class Custom_carot implements Listener {
-	ItemStack customcarto = new ItemStack(Material.GOLDEN_CARROT);
-	ItemMeta metas = customcarto.getItemMeta();
+	private ItemStack customcarto = new ItemStack(Material.GOLDEN_CARROT);
+	private ItemMeta metas = customcarto.getItemMeta();
+	private NamespacedKey carotkey = new NamespacedKey(Potato.getInstance(), "Carott_Key");
 	public void customcarot(){
 		ArrayList<String> lores = new ArrayList<>();
 		lores.add("Everyone favorite carrot");
@@ -29,7 +32,7 @@ public class Custom_carot implements Listener {
 		metas.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		customcarto.setItemMeta(metas);
 		@SuppressWarnings("")
-		ShapedRecipe s = new ShapedRecipe(customcarto);
+		ShapedRecipe s = new ShapedRecipe(carotkey, customcarto);
 		s.shape("^^^","^$^","^^^");
 		s.setIngredient('^', Material.GOLD_BLOCK);
 		s.setIngredient('$', Material.GOLDEN_CARROT);

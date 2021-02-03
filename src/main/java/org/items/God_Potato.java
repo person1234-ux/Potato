@@ -3,6 +3,7 @@ package org.items;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.event.Listener;
@@ -17,9 +18,10 @@ import java.util.HashSet;
 import java.util.UUID;
 
 public class God_Potato implements Listener {
-	HashSet<UUID> gods = new HashSet<>();
-	ItemStack god = new ItemStack(Material.POTATO);
-   ItemMeta meta = god.getItemMeta();
+
+	private ItemStack god = new ItemStack(Material.POTATO);
+   private ItemMeta meta = god.getItemMeta();
+   private NamespacedKey godkey = new NamespacedKey(Potato.getInstance(), "god_key");
 
 
 
@@ -37,7 +39,7 @@ public class God_Potato implements Listener {
    god.setItemMeta(meta);
 
 	   @SuppressWarnings("")
-	   ShapedRecipe r = new ShapedRecipe(god);
+	   ShapedRecipe r = new ShapedRecipe(godkey, god);
 	   r.shape("###","#$#","###");
 	   r.setIngredient('#', Material.NETHERITE_BLOCK);
 	   r.setIngredient('$', Material.POTATO);

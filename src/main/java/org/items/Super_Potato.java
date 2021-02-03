@@ -1,5 +1,7 @@
 package org.items;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
@@ -15,10 +17,12 @@ import org.main.Potato;
 import java.util.ArrayList;
 
 public class Super_Potato implements Listener {
-	Plugin plugin = Potato.getPlugin(Potato.class);
 
-	ItemStack item = new ItemStack(Material.POTATO);
-	ItemMeta meta = item.getItemMeta();
+
+	private ItemStack item = new ItemStack(Material.POTATO);
+	private ItemMeta meta = item.getItemMeta();
+	private NamespacedKey itemkey = new NamespacedKey(Potato.getInstance(), "item_key");
+
 
 	/**
 	 * this creates a ceustom potato which increases the players speed along with has knockback.
@@ -37,11 +41,11 @@ public class Super_Potato implements Listener {
 		item.setItemMeta(meta);
 
 		@SuppressWarnings("")
-		ShapedRecipe s = new ShapedRecipe(item);
+		ShapedRecipe s = new ShapedRecipe(itemkey, item);
 		s.shape("&&&","&#&","&&&");
 		s.setIngredient('#', Material.POTATO);
 		s.setIngredient('&', Material.GOLD_BLOCK);
-		plugin.getServer().addRecipe(s);
+		Bukkit.addRecipe(s);
 
 	}
 	}
