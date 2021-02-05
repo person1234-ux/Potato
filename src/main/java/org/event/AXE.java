@@ -10,8 +10,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.main.Potato;
 import org.mineacademy.fo.Common;
@@ -36,7 +34,6 @@ public class AXE implements Listener {
 
 					event.getEntity().getWorld().strikeLightning(event.getEntity().getLocation());// fixed the summon lighting with an axe
 					event.getEntity().getWorld().getBlockAt(event.getEntity().getLocation()).setType(Material.AIR);
-					player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 30, 1,false, false));
 
 
 
