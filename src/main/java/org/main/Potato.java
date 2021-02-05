@@ -13,7 +13,7 @@ public class Potato extends SimplePlugin  {
 	@Override
 	protected void onPluginStart() {
 		Common.log("Potato plugin started by Person");
-		Evanmcgaming_head ph = new Evanmcgaming_head();
+		//Evanmcgaming_head ph = new Evanmcgaming_head();
 		Super_Potato po = new Super_Potato();
 		God_Potato go = new God_Potato();
 		Custom_carot co = new Custom_carot();

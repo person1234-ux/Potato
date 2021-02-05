@@ -6,6 +6,7 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -34,6 +35,7 @@ public class Super_Potato implements Listener {
 		meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier("GENERIC_SPEED", .5f, AttributeModifier.Operation.ADD_NUMBER));
 		meta.addEnchant(Enchantment.KNOCKBACK, 5, true);
 		meta.addEnchant(Enchantment.VANISHING_CURSE, 1, true);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		item.setItemMeta(meta);
 
 		@SuppressWarnings("")
